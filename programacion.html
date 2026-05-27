@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRAAV - Programación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .month-sidebar {
+            background: linear-gradient(180deg, #2b1055 0%, #130630 100%);
+            border-radius: 12px;
+            padding: 15px;
+        }
+        .month-link {
+            display: block;
+            color: #cbb4f9;
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 6px;
+        }
+        .month-link.active, .month-link:hover {
+            background: var(--primary-purple);
+            color: #fff;
+        }
+        .event-card {
+            background: #1e1e38;
+            border: 1px solid rgba(30, 60, 255, 0.25);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="text-center mb-4">
+                    <div class="bg-secondary rounded-circle mx-auto mb-2" style="width:60px; height:60px;"></div>
+                    <h6 class="text-white mb-0">Katherine Balanta</h6>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="biblioteca.html"><i class="fa-solid fa-compact-disc"></i>Biblioteca</a></li>
+                    <li class="nav-item active"><a href="programacion.html"><i class="fa-solid fa-calendar-days"></i>Programación</a></li>
+                    <li class="nav-item"><a href="control.html"><i class="fa-solid fa-tower-broadcast"></i>Control en vivo</a></li>
+                    <li class="nav-item"><a href="perfil.html"><i class="fa-solid fa-clock-rotate-left"></i>Historial</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-outline-danger rounded-pill btn-sm">Salir</a>
+        </aside>
+
+        <main class="main-content animate-fade">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold mb-0"><i class="fa-regular fa-calendar-check me-2 text-purple"></i>Programación</h4>
+                <div style="width: 300px;">
+                    <input type="text" class="form-control form-control-custom" placeholder="🔍 Buscar evento...">
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-2">
+                    <div class="month-sidebar">
+                        <span class="text-muted d-block small mb-2 uppercase fw-bold">Meses</span>
+                        <a href="#" class="month-link">Enero</a>
+                        <a href="#" class="month-link">Febrero</a>
+                        <a href="#" class="month-link">Marzo</a>
+                        <a href="#" class="month-link active">Abril</a>
+                        <a href="#" class="month-link">Mayo</a>
+                        <a href="#" class="month-link">Junio</a>
+                        <a href="#" class="month-link">Julio</a>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <h5 class="mb-3 text-white-50">Abril - 2026</h5>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="event-card">
+                                <h1 class="fw-bold text-primary mb-0">04</h1>
+                                <p class="mb-1 small fw-semibold">Silvestre Dangond</p>
+                                <span class="text-muted extra-small d-block"><i class="fa-solid fa-location-dot me-1"></i>Parque Principal</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="event-card">
+                                <h1 class="fw-bold text-primary mb-0">06</h1>
+                                <p class="mb-1 small fw-semibold">Los Tupamaros</p>
+                                <span class="text-muted extra-small d-block"><i class="fa-solid fa-location-dot me-1"></i>Plaza Central</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="event-card">
+                                <h1 class="fw-bold text-primary mb-0">18</h1>
+                                <p class="mb-1 small fw-semibold">Grupo Niche</p>
+                                <span class="text-muted extra-small d-block"><i class="fa-solid fa-location-dot me-1"></i>Estadio Regional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

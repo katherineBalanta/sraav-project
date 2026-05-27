@@ -1,0 +1,27 @@
+SENA
+Evidencia: GA6-220501096-AA4-EV01
+
+Nombre del Proyecto:
+Sistema de Automatización de Audio y Video (SRAAV)
+
+Aprendiz:
+Katherine Balanta Villegas
+
+Descripción:
+Este proyecto corresponde al desarrollo de interfaces frontend
+para un sistema de automatización multimedia, diseñado con una
+interfaz moderna, responsive e interactiva.
+
+El software permite gestionar diferentes módulos relacionados
+con audio y video, incluyendo programación, biblioteca multimedia,
+control en vivo, dashboard principal y perfil de usuario.
+
+Tecnologías Utilizadas:
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Font Awesome
+
+Entorno de Desarrollo:
+Visual Studio Code

@@ -1,0 +1,194 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y VARIABLES (SRAAV)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark: #0b0b12;
+    --bg-card: #1c1c28;
+    --primary-blue: #1e3cff;
+    --primary-purple: #7b2cff;
+    --btn-green: #39d353;
+    --text-white: #ffffff;
+    --text-muted: #a0a0b0;
+    --gradient-sidebar: linear-gradient(180deg, #09090e 0%, #101026 100%);
+    --gradient-glow: linear-gradient(135deg, #1e3cff 0%, #7b2cff 100%);
+    --glass-bg: rgba(28, 28, 40, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Efectos Glassmorphism y Brillos */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(123, 44, 255, 0.2);
+    border-color: rgba(123, 44, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Botonera y UI de Control */
+.btn-blue {
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-blue:hover {
+    background-color: #0022ff;
+    box-shadow: 0 0 15px rgba(30, 60, 255, 0.5);
+    color: var(--text-white);
+}
+
+.btn-purple {
+    background-color: var(--primary-purple);
+    color: var(--text-white);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+    background-color: #6219e0;
+    box-shadow: 0 0 15px rgba(123, 44, 255, 0.5);
+    color: var(--text-white);
+}
+/* ==========================================================================
+   BOTÓN VERDE ESTILO SRAAV (FOTO DE REFERENCIA)
+   ========================================================================== */
+.btn-login-green {
+    background-color: #035310 !important; /* El verde brillante exacto */
+    color: #000000 !important;             /* Texto negro para alto contraste */
+    font-weight: 600 !important;           /* Texto en negrita */
+    font-size: 16px;
+    border: none !important;
+    border-radius: 50px !important;        /* Hace el botón completamente ovalado */
+    padding: 12px 30px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(44, 189, 68, 0.418); /* Pequeño brillo verde abajo */
+}
+
+/* Efecto cuando pasas el mouse por encima */
+.btn-login-green:hover {
+    background-color: #2eb443 !important; /* Un verde un poco más oscuro al presionar */
+    box-shadow: 0 6px 20px rgba(15, 58, 22, 0.6); /* El brillo se intensifica */
+    transform: translateY(-1px); /* Sutil efecto de elevación */
+    color: #000000 !important;
+}
+
+.btn-green {
+    background-color: var(--btn-green);
+    color: #023d1c;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-green:hover {
+    background-color: #2eb443;
+    box-shadow: 0 0 12px rgba(57, 211, 83, 0.6);
+}
+
+/* Layout con Sidebar Fijo */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: var(--gradient-sidebar);
+    border-right: 1px solid var(--glass-border);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: radial-gradient(circle at top right, #14142b, #140f0f);
+}
+
+/* Estilos de Menú de Navegación Lateral */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-item a i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.nav-item.active a, .nav-item a:hover {
+    background: linear-gradient(90deg, rgba(30,60,255,0.2) 0%, rgba(123,44,255,0.2) 100%);
+    color: var(--text-white);
+    border-left: 4px solid var(--primary-purple);
+}
+
+/* Inputs con estilo oscuro */
+.form-control-custom {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-white);
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s;
+}
+
+.form-control-custom:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 8px rgba(30, 60, 255, 0.3);
+    color: var(--text-white);
+    outline: none;
+}
+
+/* Animación sutil de entrada general */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+    animation: fadeIn 0.4s ease-out forwards;
+}
